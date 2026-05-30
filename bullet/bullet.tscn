@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c0vt1gm24f64m"]
+
+[ext_resource type="Script" uid="uid://bsfqiu87axwca" path="res://bullet/bullet.gd" id="1_6wip1"]
+[ext_resource type="Texture2D" uid="uid://mba66jm3vgf" path="res://assets/spacepixels-0.2.0 (1)/spacepixels-0.2.0/pixel_laser_red.png" id="1_v7oki"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k2aps"]
+size = Vector2(8, 2.8267932)
+
+[node name="BulletArea" type="Area2D" unique_id=1601225922]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_6wip1")
+
+[node name="BulletSpite" type="Sprite2D" parent="." unique_id=707649050]
+position = Vector2(-0.34445652, 9.965763)
+scale = Vector2(0.4868891, 0.48964968)
+texture = ExtResource("1_v7oki")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1869628121]
+position = Vector2(4.7683716e-07, 8.546957)
+scale = Vector2(0.7907918, 5.2731442)
+shape = SubResource("RectangleShape2D_k2aps")
+
+[node name="Bullet" type="Node2D" parent="." unique_id=831805086]
+script = ExtResource("1_6wip1")
